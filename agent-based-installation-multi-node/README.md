@@ -156,7 +156,7 @@ To create the agent ISO run below command
 ```bash
 cd ocp;openshift-install --dir . agent create image
 ```
-After attaching the ISO to all master nodes and starting the installation run below command on the bastion node where we generated the ISO
+After attaching the ISO to all master nodes and starting the installation run below command on the bastion node where we generated the ISO. Below command will show us the bootstrap process.
 ```bash
 cd ocp;openshift-install --dir . agent wait-for bootstrap-complete     --log-level=info
 ```
@@ -214,7 +214,14 @@ INFO Host: master3, reached installation stage Rebooting
 ```
 On the Master1 node console we will see 3 out of 3 nodes are Ready, then it will display Installation in progress.
 ![Installation Started](images/installation-started.png)
-After the successfull installation we will get following output
+After the bootstrap completion we will get following output
 ```bash
-
+INFO Host: master1, reached installation stage Waiting for bootkube: waiting for ETCD bootstrap to be complete 
+INFO Bootstrap configMap status is complete       
+INFO Bootstrap is complete                        
+INFO cluster bootstrap is complete
+```
+Now it's time to monitor the installation process with below command.
+```bash
+openshift-install --dir . agent wait-for install-complete
 ```
