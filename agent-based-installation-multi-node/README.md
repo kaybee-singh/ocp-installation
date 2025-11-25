@@ -224,4 +224,18 @@ INFO cluster bootstrap is complete
 Now it's time to monitor the installation process with below command.
 ```bash
 openshift-install --dir . agent wait-for install-complete
+openshift-install --dir . agent wait-for install-complete
+INFO Bootstrap Kube API Initialized               
+INFO Bootstrap configMap status is complete       
+INFO Cluster installation in progress             
+INFO Host: master1, reached installation stage Rebooting 
+INFO Bootstrap is complete                        
+INFO cluster bootstrap is complete                
+INFO Cluster is installed                         
+INFO Install complete!                            
+INFO To access the cluster as the system:admin user when using 'oc', run 
+INFO     export KUBECONFIG=/root/ocp/auth/kubeconfig 
+INFO Access the OpenShift web-console here: https://console-openshift-console.apps.ab.example.com 
+INFO Login to the console with user: "kubeadmin", and password: "YWiux-euuxQ-jX4ed-fSWSY" 
+
 ```
