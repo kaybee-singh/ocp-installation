@@ -152,6 +152,10 @@ hosts:
             next-hop-address: 192.168.122.1
             next-hop-interface: ens192
 ```
+Install nmstate dependency
+```bash
+dnf install /usr/bin/nmstatectl -y
+```
 To create the agent ISO run below command
 ```bash
 cd ocp;openshift-install --dir . agent create image
